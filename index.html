@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<html lang ="en">
+<head>
+	<title>StackYak App</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src='api.js'></script>
+   
+      
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper pink darken-4">
+      <a href="#" class="brand-logo center ">STACKYAK : Make Connection Easier!</a>
+      
+    </div>
+  </nav>
+  
+    
+  <div class="row">
+    <div class="input-field col s12">
+      <input value="741bcb76-16de-44c1-ad03-a1bc47c3e453" type="text" name="Key" id="Key" class="validate ">
+      <label class="active" for="first_name2">Current User Key</label>
+    </div>
+  </div>
+  
+  
+
+  <div class="row">
+    <div class="input-field col s6">
+      Please reset your Nickname below:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <input class="waves-effect waves-light btn pink darken-4" type="button" id="ChangeName" value="Change User Name" onclick="changeName()">
+	 <input type="text" id="Nickname">
+
+    </div>
+    
+    
+    
+  <div class="row">
+    <div class="input-field col s6">
+        Please type in your message below:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <input class="waves-effect waves-light btn pink darken-4" type="button" name="Post" id="Post" value="Post Message" onclick='postMsg();'>
+	    <input type="text" id="postMsg">
+   
+   
+    </div>
+  </div>
+    
+  </div>
+
+
+<div class= "row center">
+  
+	<input class="waves-effect waves-light btn pink darken-4" type="button" id="getMsg" value="Show All Message" onclick="getMsg()">
+	<input class="waves-effect waves-light btn pink darken-4" type="button" id="getMyMsg" value="Show Your Own Message" onclick="getMypost()" >
+	<input class="waves-effect waves-light btn pink darken-4" type="button" id="getMyInformation" value="User Information" onclick="getUser()">
+	<input class="waves-effect waves-light btn pink darken-4" type="button" id="FilterOutNickname" value="Filter by Nickname" onclick="FilterOutNicknamer()">
+	<input class="waves-effect waves-light btn pink darken-4" type="button" id="SortByVotes" value="Sort by votes" onclick="SortByVotes()">
+</div>
+
+
+	<table id='table1' class="striped green lighten-5">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Content</th>
+				<th>User Nickname</th>
+                <th>Submitted Time</th>
+				<th>Votes</th>
+				<th>Like It?</th>
+			</tr>
+		</thead>
+		<tbody id='messageContents'>
+
+		</tbody>
+	</table>
+
+	<table id='table2' class="striped striped green lighten-5" style="display: none">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Content</th>
+				<th>User Nickname</th>
+				<th>Submitted Time</th>
+				<th>votes</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody id='messageMyContents'>
+
+		</tbody>
+	</table>
+
+	<table id='table3' class="striped striped green lighten-5" style="display: none">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>User Nickname</th>
+				<th>Total Posts</th>
+				<th>Total Scores</th>
+			</tr>
+		</thead>
+		<tbody id='UserInformation'>
+
+		</tbody>
+	</table>
+	
+	
+
+
+
+
+</body>
+
+
+</html>
